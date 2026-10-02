@@ -22,6 +22,8 @@ public class Main {
         test3();
         test4();
         test5();
+        test6();
+        test7();
 
         System.out.println();
         System.out.println("SUMMARY: " + passed + "/" + total + " PASS");
@@ -157,6 +159,38 @@ public class Main {
         System.out.println("Same data: " + sameData);
         System.out.println("Before: " + before);
         System.out.println("After: " + after);
+    }
+
+    public static void test6() {
+        Reminder reminder = new Reminder(
+                "R3",
+                "Football at 7",
+                new PushChannel()
+        );
+        String actual = reminder.execute();
+        String expected = "PUSH: R3 - Reminder: Football at 7";
+        showTest(
+                "T6",
+                "Reminder + PushChannel",
+                actual,
+                expected
+        );
+    }
+
+    public static void test7() {
+        UrgentAlert alert = new UrgentAlert(
+                "U2",
+                "Battery is low",
+                new PushChannel()
+        );
+        String actual = alert.execute();
+        String expected = "PUSH: U2 - URGENT: Battery is low";
+        showTest(
+                "T7",
+                "UrgentAlert + PushChannel",
+                actual,
+                expected
+        );
     }
 
     public static void showTest(
