@@ -4,7 +4,10 @@
 
 ## Topic:Notifications
 
+## Base Commit: a5f6adb1e873c89370c2b3acf8c24f64dfc7bed4
+
 ##  Project
+
 
 
 This project shows the Bridge design pattern using *notifications*.
@@ -117,9 +120,14 @@ The final result should be:
 `SUMMARY: 7/7 PASS`
 
 ## How to Run
+
 Compile:
+
 ```bash
 javac --release 17 -encoding UTF-8 -d out "@sources.txt"
+```
+
+Run:
 
 ```bash
 java -cp out Main --demo
