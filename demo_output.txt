@@ -1,0 +1,39 @@
+T1
+PASS
+Classes: Reminder + EmailChannel
+Result: EMAIL: R1 - Reminder: Go to gym
+
+T2
+PASS
+Classes: Reminder + SmsChannel
+Result: SMS: R1 - Reminder: Go to gym
+
+T3
+PASS
+Classes: UrgentAlert + EmailChannel
+Result: EMAIL: U1 - URGENT: Memory full
+
+T4
+PASS
+Classes: UrgentAlert + SmsChannel
+Result: SMS: U1 - URGENT: Memory full
+
+T5
+PASS
+Classes: Reminder, EmailChannel, SmsChannel
+Same object: true
+Same data: true
+Before: EMAIL: R2 - Reminder: Check your plans
+After: SMS: R2 - Reminder: Check your plans
+
+T6
+PASS
+Classes: Reminder + PushChannel
+Result: PUSH: R3 - Reminder: Football at 7
+
+T7
+PASS
+Classes: UrgentAlert + PushChannel
+Result: PUSH: U2 - URGENT: Battery is low
+
+SUMMARY: 7/7 PASS
